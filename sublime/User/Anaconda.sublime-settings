@@ -1,0 +1,7 @@
+{
+    "pep8_ignore":
+    [
+        "E501"
+    ],
+    "python_interpreter": "/Users/Maronato/anaconda/bin/python",
+}

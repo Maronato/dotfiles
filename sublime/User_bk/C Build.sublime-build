@@ -1,0 +1,16 @@
+{
+    "cmd" : ["gcc", "-lm", "-Wall", "$file_name", "-std=c99", "-pedantic-errors", "-o", "${file_base_name}.exe"],
+    "selector": "source.c",
+    "shell": true,
+    "working_dir": "$file_path",
+
+    "variants" : [
+
+        { "name": "Internal",
+          "cmd" : ["${file_base_name}.exe"]
+        },
+        { "name": "External",
+          "cmd" : ["start", "cmd", "/k", "$file_base_name"]
+        }
+    ]
+}

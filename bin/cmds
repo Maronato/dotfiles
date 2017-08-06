@@ -1,0 +1,142 @@
+#!/bin/bash
+
+function osx_cmd {
+    echo "
+    OSX commands:
+
+    Sublime - Finder integration
+    ----------------------------
+    ofd         Open the current directory in a Finder window
+    pfd         Return the path of the frontmost Finder window
+    pfs         Return the current Finder selection
+    cdf         cd to the current Finder directory
+
+    Quick Look
+    ----------
+    quick-look  Quick-Look a specified file
+    man-preview Open a specified man page in Preview app
+
+    Hidden files
+    ------------
+    showfiles   Show hidden files
+    hidefiles   Hide the hidden files
+
+    Spotify
+    -------
+    spotify     Control Spotify and search by artist, album, track and etc.
+    "
+}
+
+function sublime_cmd {
+    echo "
+    Sublime commands:
+
+    st          open a specified file in Sublime Text
+    stt         open the current directory in Sublime Text
+    "
+}
+
+function git_cmd {
+    echo '
+    Git commands
+
+    g           git
+    ga          git add
+    gaa         git add --all
+    gapa        git add --patch
+    gb          git branch
+    ggsup       git branch --set-upstream-to = origin/$(current_branch)
+    gcmsg       git commit -m
+    gc          git commit -v
+    gc!         git commit -v --amend
+    gca         git commit -v -a
+    gcam        git commit -a -m
+    gca!        git commit -v -a --amend
+    gco         git checkout
+    gcb         git checkout -b
+    gcm         git checkout master
+    gcd         git checkout develop
+    gd          git diff
+    gf          git fetch
+    gm          git merge
+    gmom        git merge origin/master
+    gp          git push
+    gpd         git push --dry-run
+    gpu         git push upstream
+    gpv         git push -v
+    gpsup       git push --set-upstream origin $(current_branch)
+    gl          git pull
+    gr          git remote
+    grv         git remote -v
+    gra         git remote add
+    grmv        git remote rename
+    grrm        git remote remove
+    grset       git remote set-url
+    grup        git remote update
+    grb         git rebase
+    gru         git reset --
+    grh         git reset HEAD
+    grhh        git reset HEAD --hard
+    gst         git status
+    gss         git status -s
+    '
+}
+
+
+function help_cmd {
+    echo "
+    options:
+
+    osx         OSX-specific commands
+    sublime     Sublime specific commands
+    git         Git commands
+
+
+    Simple commands:
+    toggle_conda    Toggles Anaconda as the Python interpreter
+    avenv <name>    Activates 'venv' virtual environment on current directory
+    mkvenv <name> <pip> <req>   Creates a virtual environment and installs dependencies
+    rmvenv <name>   Deletes a virtual environment
+    lsvenv          List envs
+    edit_cmds       Opens this directory in sublime
+    letsenc         Opens letsencrypt config for my websites
+    nyan            Nyan cat!
+    cmatrix         Matrix!
+
+    Other useful commands:
+    history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] \" \" CMD[a]/count*100 \"% \" a;}' | grep -v \"./\" | column -c3 -s \" \" -t | sort -nr | nl |  head -n10
+
+    https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions
+    "
+}
+
+if [[ $# -eq 0 ]]; then
+    help_cmd
+else
+    while [[ $# -gt 0 ]]; do
+    key="$1"
+
+    case $key in
+        OSX|osx|--osx)
+        osx_cmd
+        shift # past argument
+        ;;
+        s|sublime|--sublime)
+        sublime_cmd
+        shift # past argument
+        ;;
+        g|git|--git)
+        git_cmd
+        shift # past argument
+        ;;
+        -h|--help|help)
+        help_cmd
+        shift # past argument
+        ;;
+        *)
+         echo "Invalid argument"
+        ;;
+    esac
+    shift # past argument or value
+    done
+fi
