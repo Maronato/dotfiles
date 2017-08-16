@@ -1,6 +1,6 @@
 # Maronato does dotfiles
 
-Heavily inspired by the [@holman](https://github.com/holman/dotfiles)`s great dotfiles.
+Heavily inspired by [@holman's](https://github.com/holman/dotfiles) great dotfiles.
 
 # Todo
 

@@ -1,43 +1,58 @@
-# cask_args appdir: '/Applications'
 
-# tap 'homebrew/bundle'
-# tap 'puma/puma'
+tap caskroom/cask
+cask_args appdir: '/Applications'
 
-# brew 'ack'
+# Python stuff
+brew 'python3'
+
+# DS stuff
+brew 'apache-spark'
+brew 'apache-zeppelin'
+brew 'hadoop'
+cask 'anaconda'
+cask 'rstudio'
+
+# Web stuff
+brew 'node'
+brew 'heroku-toolbelt'
+cask 'google-chrome'
+
+# Other languages
+brew 'r'
+brew 'scala'
+brew 'go'
+cask 'mactex'
+
+# Database
+brew 'redis'
+brew 'postgresql'
+
+# Dev
+brew 'ack'
+brew 'libgit2'
+cask 'sublime-text'
+cask 'hyper'
 # brew 'coreutils'
-# brew 'go'
-# brew 'grc'
+
+# Other
+brew 'certbot'
+brew 'screenfetch'
+brew 'openssl'
+brew 'wget'
+cask 'slack'
+cask 'handbrake'
+cask 'vlc'
+cask 'transmission'
+cask 'steam'
+cask 'telegram'
+cask '1password'
+cask 'gimp'
+cask 'the-unarchiver'
+cask 'docker'
 # brew 'imagemagick'
 # brew 'jp2a'
-# brew 'jq'
-# brew 'libcaca', args: ['with-imlib2']
-# brew 'libgit2'
-# brew 'openssl'
-# brew 'node'
-# brew 'readline'
-# brew 'postgresql'
-# brew 'puma/puma/puma-dev'
-# brew 'ruby-build'
-# brew 'rbenv'
-# brew 'roundup'
-# brew 'spaceman-diff'
-# brew 'spark'
-# brew 'unrar'
-# brew 'wget'
-# brew 'yarn'
-# brew 'youtube-dl'
 
-# cask '1password'
-# cask 'adium'
-# cask 'atom'
-# cask 'firefox'
-# cask 'garmin-express'
-# cask 'google-chrome'
-# cask 'handbrake'
-# cask 'mapbox-studio'
-# cask 'seashore'
-# cask 'slack'
-# cask 'steam'
-# cask 'transmission'
-# cask 'tunnelbear'
-# cask 'vlc'
+# Apps
+cask 'dropbox'
+cask 'google-drive'
+cask 'duet'

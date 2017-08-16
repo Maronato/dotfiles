@@ -1,0 +1,5 @@
+#!/bin/bash
+echo -n Password:
+read -s pass
+echo
+openssl enc -in ../etc/1.enc -aes-256-cbc -salt -a -pass pass:$pass -d
