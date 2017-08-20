@@ -1,7 +1,10 @@
 #!/bin/bash
 
-# Get current working dir and sub / for _
-curr_dir=${PWD//\//_}
+# Get current working dir and sub ' ' for -
+curr_dir=${PWD// /-}
+
+# And sub / for _
+curr_dir=${curr_dir//\//_}
 
 # Set python path
 py_path=/usr/local/bin/python3
