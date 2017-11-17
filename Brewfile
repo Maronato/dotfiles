@@ -1,5 +1,5 @@
 
-tap caskroom/cask
+# tap caskroom/cask
 cask_args appdir: '/Applications'
 
 # Python stuff
@@ -39,6 +39,7 @@ brew 'certbot'
 brew 'screenfetch'
 brew 'openssl'
 brew 'wget'
+brew 'jpeg'
 cask 'slack'
 cask 'handbrake'
 cask 'vlc'

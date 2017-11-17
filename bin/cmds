@@ -93,6 +93,7 @@ function help_cmd {
 
 
     Simple commands:
+    hpm             Hyper Package Manager for Hyper.js
     toggle_conda    Toggles Anaconda as the Python interpreter
     avenv <name>    Activates 'venv' virtual environment on current directory
     mkvenv <name> <pip> <req>   Creates a virtual environment and installs dependencies
