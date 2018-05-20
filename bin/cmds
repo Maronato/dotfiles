@@ -82,6 +82,17 @@ function git_cmd {
     '
 }
 
+function show_docs {
+    echo '
+    ZSH tips
+
+    shift+tab   Iterate through available commands
+
+    Hyper tips
+
+    http://     Typing urls opens a browser
+    '
+}
 
 function help_cmd {
     echo "
@@ -90,6 +101,7 @@ function help_cmd {
     osx         OSX-specific commands
     sublime     Sublime specific commands
     git         Git commands
+    docs        Helpful tips and tricks
 
 
     Simple commands:
@@ -128,6 +140,10 @@ else
         ;;
         g|git|--git)
         git_cmd
+        shift # past argument
+        ;;
+        d|doc|docs|--doc|--docs)
+        show_docs
         shift # past argument
         ;;
         -h|--help|help)

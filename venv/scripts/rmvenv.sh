@@ -21,3 +21,6 @@ v_path=$venv_dir/$curr_dir/$venv_name
 
 # Deletes the environment
 [[ -d $v_path ]] && { rm -r $v_path; echo "env '$venv_name' removed"; } || echo "env '$venv_name' does not exist"
+
+# Deletes sublime project file for Anaconda IDE
+rm -f ${PWD##*/}.sublime-project

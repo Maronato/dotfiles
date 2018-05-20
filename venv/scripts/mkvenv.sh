@@ -32,6 +32,33 @@ v_path=$venv_dir/$curr_dir/$venv_name
 # Create venv
 [[ -d $v_path ]] && echo "env '$venv_name' already exists" || { $py_path -m venv $v_path; echo "env '$venv_name' created"; }
 
+# Create Sublime project file settings for the Anaconda IDE
+cat <<EOF >${PWD}/${PWD##*/}.sublime-project
+{
+    "build_systems":
+    [
+        {
+            "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+            "name": "Anaconda Python Builder",
+            "selector": "source.python",
+            "shell_cmd": "\"${v_path}/bin/python\" -u \"$file\""
+        }
+    ],
+    "folders":
+    [
+        {
+            "path": "."
+        }
+    ],
+    "settings":
+    {
+        "python_interpreter": "${v_path}/bin/python"
+    }
+}
+
+EOF
+echo "sublime project file created"
+
 # Install dependencies
 if [[ $pip != "false" ]]; then
     eval pip=\$$(($pip + 1))

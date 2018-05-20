@@ -1,4 +1,5 @@
 {
+	"auto_upgrade": false,
 	"bootstrapped": true,
 	"in_process_packages":
 	[
@@ -9,6 +10,7 @@
 		"ARM Assembly",
 		"Color Schemes by carlcalderon",
 		"Dayle Rees Color Schemes",
+		"DocBlockr",
 		"Git",
 		"GitGutter",
 		"Glue",

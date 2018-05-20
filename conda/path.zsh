@@ -1,2 +1,3 @@
 # Anaconda PATH
-export PATH="$HOME/anaconda/bin:$PATH"
+export CONDAPATH="$HOME/anaconda/bin"
+export PATH="$CONDAPATH:$PATH"
