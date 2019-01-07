@@ -3,18 +3,13 @@
 cask_args appdir: '/Applications'
 
 # Python stuff
-brew 'python3'
+brew 'python'
 
 # DS stuff
-brew 'apache-spark'
-brew 'apache-zeppelin'
-brew 'hadoop'
 cask 'anaconda'
-cask 'rstudio'
 
 # Web stuff
 brew 'node'
-brew 'heroku-toolbelt'
 cask 'google-chrome'
 
 # Other languages
@@ -25,14 +20,19 @@ cask 'mactex'
 
 # Database
 brew 'redis'
-brew 'postgresql'
+brew 'sqlite'
+brew 'postgres'
+brew 'mongodb'
+cask 'postico'
+brew 'gdal'
+brew 'geos'
 
 # Dev
-brew 'ack'
-brew 'libgit2'
 cask 'sublime-text'
 cask 'hyper'
-# brew 'coreutils'
+brew 'htop'
+brew 'zsh'
+brew 'zsh-completions'
 
 # Other
 brew 'certbot'
@@ -40,20 +40,18 @@ brew 'screenfetch'
 brew 'openssl'
 brew 'wget'
 brew 'jpeg'
+cask 'the-unarchiver'
+
+# Apps
+cask 'duet'
 cask 'slack'
-cask 'handbrake'
-cask 'vlc'
-cask 'transmission'
 cask 'steam'
 cask 'telegram'
 cask '1password'
 cask 'gimp'
-cask 'the-unarchiver'
-cask 'docker'
-# brew 'imagemagick'
-# brew 'jp2a'
-
-# Apps
-cask 'dropbox'
-cask 'google-drive'
-cask 'duet'
+cask 'inkscape'
+cask 'postman'
+cask 'setapp'
+cask 'parallels'
+cask 'daisydisk'
+cask 'spotify'
