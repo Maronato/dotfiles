@@ -152,10 +152,5 @@ then
   fi
 fi
 
-# Configure sublime
-info "configuring sublime"
-source $DOTFILES/sublime/install
-success "done"
-
 echo ''
 echo '  All installed!'
