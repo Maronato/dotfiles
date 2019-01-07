@@ -8,17 +8,22 @@
 	[
 		"Anaconda",
 		"ARM Assembly",
+		"BracketHighlighter",
 		"Color Schemes by carlcalderon",
 		"Dayle Rees Color Schemes",
+		"Djaneiro",
 		"DocBlockr",
+		"Emmet",
+		"ESLint Fix",
 		"Git",
 		"GitGutter",
 		"Glue",
-		"LaTeXTools",
-		"Markdown Preview",
 		"Material Theme",
+		"MarkdownPreview",
 		"Package Control",
 		"Sass",
+		"SublimeLinter-eslint",
+		"SublimeLinter",
 		"SideBarEnhancements",
 		"Terminal",
 		"Theme - Centurion",
@@ -29,6 +34,7 @@
 		"Theme - SoDaReloaded",
 		"Theme - Spacegray",
 		"TodoReview",
+		"Vue Syntax Highlight",
 		"Whitespace"
 	]
 }

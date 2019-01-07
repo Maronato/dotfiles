@@ -60,31 +60,8 @@ SETTINGS_FILE="$ST3_LOCAL/Installed Packages/Preferences.sublime-package"
 if [[ ! -f "$SETTINGS_FILE" ]]; then
     [[ $(check_overwrite) == "Yes" ]] || { fail "skipping sublime configuration"; exit; }
     info "overwriting settings"
-    find "$DOTFILES/sublime/User/" -type f -iname '*.sublime-settings' -print0 | while IFS= read -r -d $'\0' line; do
-        f_name=$ST3_LOCAL/Packages/User/$(basename "$line")
-        [[ -f "$f_name" ]] && rm "$f_name"
-    done
-    find "$DOTFILES/sublime/User/" -type f -iname '*.sublime-build' -print0 | while IFS= read -r -d $'\0' line; do
-        f_name=$ST3_LOCAL/Packages/User/$(basename "$line")
-        [[ -f "$f_name" ]] && rm "$f_name"
-    done
+    d_name=$ST3_LOCAL/Packages/User
+    h_name=$ST3_LOCAL/Packages
+    [[ -f "$d_name" ]] && rm -rf "$d_name"
+    ln -sf "$DOTFILES/sublime/User" "$h_name"
 fi
-
-# # # Link keymaps
-# # for platform in OSX Linux; do
-# #     ln -sf "$DOTFILES/sublime/Default.sublime-keymap" \
-# #         "$ST3_LOCAL/Packages/User/Default ($platform).sublime-keymap"
-# # done
-
-# Link all sublime-settings files
-info "creating sublime symlinks"
-find "$DOTFILES/sublime/User/" -type f -iname '*.sublime-settings' -print0 | while IFS= read -r -d $'\0' line; do
-    f_name=$ST3_LOCAL/Packages/User/$(basename "$line")
-    [[ -f "$f_name" ]] && rm "$f_name"
-    ln -sf "$line" "$f_name"
-done
-find "$DOTFILES/sublime/User/" -type f -iname '*.sublime-build' -print0 | while IFS= read -r -d $'\0' line; do
-    f_name=$ST3_LOCAL/Packages/User/$(basename "$line")
-    [[ -f "$f_name" ]] && rm "$f_name"
-    ln -sf "$line" "$f_name"
-done

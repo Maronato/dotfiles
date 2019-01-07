@@ -5,38 +5,15 @@
 	"default_encoding": "UTF-8",
 	"ensure_newline_at_eof_on_save": true,
 	"fallback_encoding": "UTF-8",
-	"file_exclude_patterns":
-	[
-		"*.pyc",
-		"*.pyo",
-		"*.exe",
-		"*.dll",
-		"*.obj",
-		"*.a",
-		"*.lib",
-		"*.so",
-		"*.dylib",
-		"*.ncb",
-		"*.sdf",
-		"*.suo",
-		"*.pdb",
-		"*.idb",
-		".DS_Store",
-		"*.class",
-		"*.psd",
-		"*.db",
-		"*.sublime-workspace"
-	],
 	"font_face": "Ubuntu Mono",
 	"font_options":
 	[
 		"gray_antialias",
 		"subpixel_antialias"
 	],
-	"font_size": 20,
+	"font_size": 15,
 	"ignored_packages":
 	[
-		"Vintage"
 	],
 	"indent_guide_options":
 	[
